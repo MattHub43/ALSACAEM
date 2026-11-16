@@ -142,6 +142,29 @@
     ]
   },
   {
+    "id": "callout",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "content_text",
+        "label": "Heading and description",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "content_cta",
+        "label": "Button link",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "content_ctaText",
+        "label": "Button label",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
