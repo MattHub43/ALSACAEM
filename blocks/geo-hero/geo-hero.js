@@ -1,18 +1,17 @@
 /**
  * Geo Hero personalization for AEM EDS / XWalk.
  *
- * Content order:
- * Default, Florida, New York, Tennessee.
- *
- * Image rows follow the same order.
+ * Supports both flattened and multi-row XWalk output.
+ * Regions: Default, Florida, New York, Tennessee.
  *
  * Priority:
- * 1. URL parameter
- * 2. Cookie
+ * 1. URL parameter (?geo=)
+ * 2. Browser cookie (eds_geo)
  * 3. Default
  */
 
 const REGIONS = ['default', 'fl', 'ny', 'tn'];
+const FIELDS_PER_REGION = 3;
 
 function normalizeRegion(value) {
   const input = (value || '').trim().toLowerCase();
@@ -33,6 +32,7 @@ function normalizeRegion(value) {
 
 function getCookie(name) {
   const prefix = `${encodeURIComponent(name)}=`;
+
   const item = document.cookie.split('; ')
     .find((cookie) => cookie.startsWith(prefix));
 
@@ -52,54 +52,68 @@ function requestedRegion() {
 export default function decorate(block) {
   const rows = [...block.children];
 
-  // First row contains all personalized text variations.
-  const contentRow = rows[0];
-  const content = contentRow?.firstElementChild;
+  // First row contains regional text content.
+  const content = rows[0]?.firstElementChild;
 
   if (!content) return;
 
-  const elements = [...content.children];
-  const fieldsPerRegion = 3;
+  const children = [...content.children];
 
-  // Validate the current XWalk content structure.
-  if (elements.length !== REGIONS.length * fieldsPerRegion) {
-    return;
+  // Separate text elements from image elements.
+  // In flattened XWalk output, images are in the same row.
+  const textElements = children.filter(
+    (element) => !element.querySelector('picture'),
+  );
+
+  const expectedCount = REGIONS.length * FIELDS_PER_REGION;
+
+  // Avoid selecting incorrect content if the model changes.
+  if (textElements.length !== expectedCount) return;
+
+  // Identify background image containers.
+  let imageContainers;
+
+  if (rows.length > 1) {
+    // Original XWalk structure: separate image rows.
+    imageContainers = rows.slice(1, 5);
+  } else {
+    // New XWalk structure: all images in one row.
+    imageContainers = children.filter(
+      (element) => element.querySelector('picture'),
+    );
   }
 
   const requested = requestedRegion();
   const regionIndex = REGIONS.indexOf(requested);
 
-  const start = regionIndex * fieldsPerRegion;
-  const end = start + fieldsPerRegion;
+  // Identify the three content elements for this region.
+  const start = regionIndex * FIELDS_PER_REGION;
+  const end = start + FIELDS_PER_REGION;
 
-  // Show only the selected regional text and CTA.
-  elements.forEach((element, index) => {
+  // Show only the selected regional text.
+  textElements.forEach((element, index) => {
     element.hidden = index < start || index >= end;
   });
 
-  // Image rows:
-  // 1 = Default
-  // 2 = Florida
-  // 3 = New York
-  // 4 = Tennessee
-  const imageRows = rows.slice(1, 5);
+  // Select matching background image.
+  const selectedContainer = imageContainers[regionIndex];
+  const selectedPicture = selectedContainer?.querySelector('picture')
+    || imageContainers[0]?.querySelector('picture');
 
-  // Find the regional image, falling back to Default.
-  const selectedImageRow = imageRows[regionIndex];
-  const selectedPicture = selectedImageRow?.querySelector('picture')
-    || imageRows[0]?.querySelector('picture');
-
-  // Hide the original image rows.
-  imageRows.forEach((row) => {
-    row.hidden = true;
+  // Hide all original image containers.
+  imageContainers.forEach((container) => {
+    container.hidden = true;
   });
+
+  // Remove any previously generated background.
+  block.querySelector('.geo-hero-background')?.remove();
 
   if (selectedPicture) {
     const background = document.createElement('div');
     background.className = 'geo-hero-background';
     background.setAttribute('aria-hidden', 'true');
 
-    // Preserve AEM responsive picture sources.
+    // Preserve AEM responsive image sources.
     const picture = selectedPicture.cloneNode(true);
     const img = picture.querySelector('img');
 
@@ -113,6 +127,7 @@ export default function decorate(block) {
     block.classList.add('has-background');
   }
 
+  // Mark personalization complete.
   block.dataset.activeGeo = requested;
   block.classList.add('geo-ready');
 }
