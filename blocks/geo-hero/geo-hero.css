@@ -1,35 +1,36 @@
 
-/* Geo Hero base styling */
+/* Geo Hero container */
 .geo-hero {
   position: relative;
-  background: #eef4fa;
+  background: #173b56;
   border-radius: 16px;
-  color: #172435;
+  color: #fff;
   margin: 28px 0;
-  min-height: 400px;
+  min-height: 460px;
   overflow: hidden;
-  padding: 44px 36px;
+  padding: 64px 48px;
+  display: flex;
+  align-items: center;
+  isolation: isolate;
 }
 
 /* Content container */
 .geo-hero > div > div {
   max-width: 740px;
-  position: relative;
-  z-index: 1;
 }
 
-/* Heading */
+/* Personalized heading */
 .geo-hero h2 {
-  font-size: clamp(28px, 4vw, 48px);
-  line-height: 1.12;
-  margin: 0 0 18px;
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: 1.1;
+  margin: 0 0 24px;
 }
 
-/* Description */
+/* Personalized description */
 .geo-hero p {
   font-size: 18px;
-  line-height: 1.55;
-  margin: 0 0 20px;
+  line-height: 1.6;
+  margin: 0 0 24px;
 }
 
 /* CTA button */
@@ -39,9 +40,10 @@
   color: #172435;
   display: inline-block;
   font-size: 16px;
-  font-weight: 600;
-  padding: 12px 20px;
+  font-weight: 700;
+  padding: 14px 28px;
   text-decoration: none;
+  transition: background 0.2s ease;
 }
 
 .geo-hero a:hover,
@@ -49,18 +51,66 @@
   background: #ffd25f;
 }
 
-/* Hide nonselected variations, including nested content */
+/* Background image layer */
+.geo-hero .geo-hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.geo-hero .geo-hero-background picture,
+.geo-hero .geo-hero-background img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.geo-hero .geo-hero-background img {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Dark gradient for readability */
+.geo-hero .geo-hero-background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgb(0 0 0 / 75%) 0%,
+    rgb(0 0 0 / 45%) 55%,
+    rgb(0 0 0 / 15%) 100%
+  );
+}
+
+/* Keep all hidden regional elements hidden */
 .geo-hero [hidden] {
   display: none !important;
 }
 
-/* Fallback before personalization initializes */
+/* Prevent other text variations appearing before JS */
+.geo-hero:not(.geo-ready) > div:first-child > div > :nth-child(n + 4) {
+  display: none;
+}
+
+/* Hide image rows before initialization */
 .geo-hero:not(.geo-ready) > div:not(:first-child) {
   display: none;
 }
 
+/* Responsive styling */
 @media (width <= 600px) {
   .geo-hero {
-    padding: 30px 22px;
+    min-height: 400px;
+    padding: 40px 24px;
+  }
+
+  .geo-hero h2 {
+    font-size: 32px;
+  }
+
+  .geo-hero p {
+    font-size: 16px;
   }
 }

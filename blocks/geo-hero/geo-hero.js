@@ -1,12 +1,14 @@
 /**
  * Geo Hero personalization for AEM EDS / XWalk.
  *
- * Each regional variation contains three elements:
- * heading, description, and CTA.
+ * Content order:
+ * Default, Florida, New York, Tennessee.
+ *
+ * Image rows follow the same order.
  *
  * Priority:
- * 1. ?geo= URL parameter
- * 2. eds_geo cookie
+ * 1. URL parameter
+ * 2. Cookie
  * 3. Default
  */
 
@@ -25,6 +27,7 @@ function normalizeRegion(value) {
   };
 
   const region = aliases[input] || input;
+
   return REGIONS.includes(region) ? region : 'default';
 }
 
@@ -47,34 +50,68 @@ function requestedRegion() {
 }
 
 export default function decorate(block) {
-  // XWalk currently renders all fields in one container.
-  const content = block.firstElementChild?.firstElementChild;
+  const rows = [...block.children];
+
+  // First row contains all personalized text variations.
+  const contentRow = rows[0];
+  const content = contentRow?.firstElementChild;
 
   if (!content) return;
 
   const elements = [...content.children];
-
-  // POC model: 3 elements per region.
   const fieldsPerRegion = 3;
+
+  // Validate the current XWalk content structure.
+  if (elements.length !== REGIONS.length * fieldsPerRegion) {
+    return;
+  }
 
   const requested = requestedRegion();
   const regionIndex = REGIONS.indexOf(requested);
 
-  // Validate the flattened structure before filtering.
-  if (elements.length !== REGIONS.length * fieldsPerRegion) {
-    console.warn(
-      'Geo Hero: Unexpected content structure',
-      elements.length,
-    );
-    return;
-  }
-
   const start = regionIndex * fieldsPerRegion;
   const end = start + fieldsPerRegion;
 
+  // Show only the selected regional text and CTA.
   elements.forEach((element, index) => {
     element.hidden = index < start || index >= end;
   });
+
+  // Image rows:
+  // 1 = Default
+  // 2 = Florida
+  // 3 = New York
+  // 4 = Tennessee
+  const imageRows = rows.slice(1, 5);
+
+  // Find the regional image, falling back to Default.
+  const selectedImageRow = imageRows[regionIndex];
+  const selectedPicture = selectedImageRow?.querySelector('picture')
+    || imageRows[0]?.querySelector('picture');
+
+  // Hide the original image rows.
+  imageRows.forEach((row) => {
+    row.hidden = true;
+  });
+
+  if (selectedPicture) {
+    const background = document.createElement('div');
+    background.className = 'geo-hero-background';
+    background.setAttribute('aria-hidden', 'true');
+
+    // Preserve AEM responsive picture sources.
+    const picture = selectedPicture.cloneNode(true);
+    const img = picture.querySelector('img');
+
+    if (img) {
+      img.loading = 'eager';
+      img.alt = '';
+    }
+
+    background.append(picture);
+    block.prepend(background);
+    block.classList.add('has-background');
+  }
 
   block.dataset.activeGeo = requested;
   block.classList.add('geo-ready');
