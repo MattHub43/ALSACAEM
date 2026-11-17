@@ -103,3 +103,12 @@
     font-size: 16px;
   }
 }
+
+/* Authorable Geo Hero text colors */
+.geo-hero.text-dark {
+  color: #172435;
+}
+
+.geo-hero.text-gold {
+  color: #ffc32c;
+}

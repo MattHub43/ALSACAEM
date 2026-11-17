@@ -216,6 +216,27 @@
     "id": "geo-hero",
     "fields": [
       {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Text Color",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "White",
+            "value": ""
+          },
+          {
+            "name": "Dark",
+            "value": "text-dark"
+          },
+          {
+            "name": "Gold",
+            "value": "text-gold"
+          }
+        ]
+      },
+      {
         "component": "richtext",
         "name": "content_default",
         "label": "Default (all regions)",
@@ -241,28 +262,28 @@
       },
       {
         "component": "reference",
-        "name": "imageDefault",
+        "name": "content_imageDefault",
         "label": "Default Background Image",
         "valueType": "string",
         "multi": false
       },
       {
         "component": "reference",
-        "name": "imageFlorida",
+        "name": "content_imageFlorida",
         "label": "Florida Background Image",
         "valueType": "string",
         "multi": false
       },
       {
         "component": "reference",
-        "name": "imageNewYork",
+        "name": "content_imageNewYork",
         "label": "New York Background Image",
         "valueType": "string",
         "multi": false
       },
       {
         "component": "reference",
-        "name": "imageTennessee",
+        "name": "content_imageTennessee",
         "label": "Tennessee Background Image",
         "valueType": "string",
         "multi": false
