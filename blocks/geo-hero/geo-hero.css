@@ -378,3 +378,58 @@
     font-size: 16px;
   }
 }
+
+/* =========================================
+   Geo Hero Author Preview Toolbar
+   Only inserted by JavaScript in AEM Author
+   ========================================= */
+
+.geo-hero-author-toolbar {
+  align-items: center;
+  background: #f4f7fb;
+  border: 1px solid #c7d3df;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  margin: 24px 0 8px;
+  padding: 14px 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.geo-hero-author-label {
+  color: #172435;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.geo-hero-author-select {
+  appearance: auto;
+  background: #fff;
+  border: 1px solid #8b9daf;
+  border-radius: 6px;
+  color: #172435;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 180px;
+  padding: 10px 14px;
+}
+
+.geo-hero-author-select:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+@media (width <= 600px) {
+  .geo-hero-author-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .geo-hero-author-select {
+    width: 100%;
+  }
+}
