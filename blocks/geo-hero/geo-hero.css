@@ -29,9 +29,9 @@
 }
 
 .geo-hero a {
-  background: #1452b8;
+  background: #ffc32c;
   border-radius: 6px;
-  color: #fff;
+  color: #172435;
   display: inline-block;
   font-size: 16px;
   font-weight: 600;
@@ -41,11 +41,14 @@
 
 .geo-hero a:hover,
 .geo-hero a:focus-visible {
-  background: #093b8e;
+  background: #ffd25f;
 }
 
 @media (max-width: 600px) {
   .geo-hero {
     padding: 30px 22px;
   }
+}
+.geo-hero > div[hidden] {
+  display: none !important;
 }
