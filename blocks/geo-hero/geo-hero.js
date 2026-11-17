@@ -16,12 +16,14 @@ const REGIONS = ['default', 'fl', 'ny', 'tn'];
 function normalizeRegion(value) {
   const input = (value || '').trim().toLowerCase();
 
-  const aliases = {
-    florida: 'fl',
-    'new-york': 'ny',
-    'new york': 'ny',
-    tennessee: 'tn',
-  };
+ const aliases = {
+  florida: 'fl',
+  virginia: 'fl',
+  va: 'fl',
+  'new-york': 'ny',
+  'new york': 'ny',
+  tennessee: 'tn',
+};
 
   const region = aliases[input] || input;
   return REGIONS.includes(region) ? region : 'default';
