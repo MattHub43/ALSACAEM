@@ -112,3 +112,284 @@
 .geo-hero.text-gold {
   color: #ffc32c;
 }
+
+/* BEGIN REGION DESIGN CONTROLS */
+.geo-hero[data-active-geo="fl"] .geo-hero-background img {
+  object-position: right center;
+}
+
+.geo-hero[data-active-geo="default"].default-heading-white h2 {
+  color: #fff;
+}
+
+.geo-hero[data-active-geo="default"].default-body-white p {
+  color: #fff;
+}
+
+.geo-hero[data-active-geo="default"].default-heading-dark h2 {
+  color: #172435;
+}
+
+.geo-hero[data-active-geo="default"].default-body-dark p {
+  color: #172435;
+}
+
+.geo-hero[data-active-geo="default"].default-heading-gold h2 {
+  color: #ffc32c;
+}
+
+.geo-hero[data-active-geo="default"].default-body-gold p {
+  color: #ffc32c;
+}
+
+.geo-hero[data-active-geo="default"].default-align-center {
+  text-align: center;
+}
+
+.geo-hero[data-active-geo="default"].default-align-right {
+  text-align: right;
+}
+
+.geo-hero[data-active-geo="default"].default-cta-white a {
+  background: #fff;
+  color: #172435;
+}
+
+.geo-hero[data-active-geo="default"].default-cta-dark a {
+  background: #172435;
+  color: #fff;
+}
+
+.geo-hero[data-active-geo="default"].default-cta-outline a {
+  background: transparent;
+  border: 2px solid currentcolor;
+  color: inherit;
+}
+
+.geo-hero[data-active-geo="default"].default-height-compact {
+  min-height: 300px;
+}
+
+.geo-hero[data-active-geo="default"].default-height-tall {
+  min-height: 650px;
+}
+
+.geo-hero[data-active-geo="default"].default-image-left .geo-hero-background img {
+  object-position: left center;
+}
+
+.geo-hero[data-active-geo="default"].default-image-center .geo-hero-background img {
+  object-position: center center;
+}
+
+.geo-hero[data-active-geo="default"].default-image-right .geo-hero-background img {
+  object-position: right center;
+}
+
+.geo-hero[data-active-geo="fl"].fl-heading-white h2 {
+  color: #fff;
+}
+
+.geo-hero[data-active-geo="fl"].fl-body-white p {
+  color: #fff;
+}
+
+.geo-hero[data-active-geo="fl"].fl-heading-dark h2 {
+  color: #172435;
+}
+
+.geo-hero[data-active-geo="fl"].fl-body-dark p {
+  color: #172435;
+}
+
+.geo-hero[data-active-geo="fl"].fl-heading-gold h2 {
+  color: #ffc32c;
+}
+
+.geo-hero[data-active-geo="fl"].fl-body-gold p {
+  color: #ffc32c;
+}
+
+.geo-hero[data-active-geo="fl"].fl-align-center {
+  text-align: center;
+}
+
+.geo-hero[data-active-geo="fl"].fl-align-right {
+  text-align: right;
+}
+
+.geo-hero[data-active-geo="fl"].fl-cta-white a {
+  background: #fff;
+  color: #172435;
+}
+
+.geo-hero[data-active-geo="fl"].fl-cta-dark a {
+  background: #172435;
+  color: #fff;
+}
+
+.geo-hero[data-active-geo="fl"].fl-cta-outline a {
+  background: transparent;
+  border: 2px solid currentcolor;
+  color: inherit;
+}
+
+.geo-hero[data-active-geo="fl"].fl-height-compact {
+  min-height: 300px;
+}
+
+.geo-hero[data-active-geo="fl"].fl-height-tall {
+  min-height: 650px;
+}
+
+
+
+.geo-hero[data-active-geo="fl"].fl-image-left .geo-hero-background img {
+  object-position: left center;
+}
+
+.geo-hero[data-active-geo="fl"].fl-image-center .geo-hero-background img {
+  object-position: center center;
+}
+
+.geo-hero[data-active-geo="fl"].fl-image-right .geo-hero-background img {
+  object-position: right center;
+}
+
+.geo-hero[data-active-geo="ny"].ny-heading-white h2 {
+  color: #fff;
+}
+
+.geo-hero[data-active-geo="ny"].ny-body-white p {
+  color: #fff;
+}
+
+.geo-hero[data-active-geo="ny"].ny-heading-dark h2 {
+  color: #172435;
+}
+
+.geo-hero[data-active-geo="ny"].ny-body-dark p {
+  color: #172435;
+}
+
+.geo-hero[data-active-geo="ny"].ny-heading-gold h2 {
+  color: #ffc32c;
+}
+
+.geo-hero[data-active-geo="ny"].ny-body-gold p {
+  color: #ffc32c;
+}
+
+.geo-hero[data-active-geo="ny"].ny-align-center {
+  text-align: center;
+}
+
+.geo-hero[data-active-geo="ny"].ny-align-right {
+  text-align: right;
+}
+
+.geo-hero[data-active-geo="ny"].ny-cta-white a {
+  background: #fff;
+  color: #172435;
+}
+
+.geo-hero[data-active-geo="ny"].ny-cta-dark a {
+  background: #172435;
+  color: #fff;
+}
+
+.geo-hero[data-active-geo="ny"].ny-cta-outline a {
+  background: transparent;
+  border: 2px solid currentcolor;
+  color: inherit;
+}
+
+.geo-hero[data-active-geo="ny"].ny-height-compact {
+  min-height: 300px;
+}
+
+.geo-hero[data-active-geo="ny"].ny-height-tall {
+  min-height: 650px;
+}
+
+.geo-hero[data-active-geo="ny"].ny-image-left .geo-hero-background img {
+  object-position: left center;
+}
+
+.geo-hero[data-active-geo="ny"].ny-image-center .geo-hero-background img {
+  object-position: center center;
+}
+
+.geo-hero[data-active-geo="ny"].ny-image-right .geo-hero-background img {
+  object-position: right center;
+}
+
+.geo-hero[data-active-geo="tn"].tn-heading-white h2 {
+  color: #fff;
+}
+
+.geo-hero[data-active-geo="tn"].tn-body-white p {
+  color: #fff;
+}
+
+.geo-hero[data-active-geo="tn"].tn-heading-dark h2 {
+  color: #172435;
+}
+
+.geo-hero[data-active-geo="tn"].tn-body-dark p {
+  color: #172435;
+}
+
+.geo-hero[data-active-geo="tn"].tn-heading-gold h2 {
+  color: #ffc32c;
+}
+
+.geo-hero[data-active-geo="tn"].tn-body-gold p {
+  color: #ffc32c;
+}
+
+.geo-hero[data-active-geo="tn"].tn-align-center {
+  text-align: center;
+}
+
+.geo-hero[data-active-geo="tn"].tn-align-right {
+  text-align: right;
+}
+
+.geo-hero[data-active-geo="tn"].tn-cta-white a {
+  background: #fff;
+  color: #172435;
+}
+
+.geo-hero[data-active-geo="tn"].tn-cta-dark a {
+  background: #172435;
+  color: #fff;
+}
+
+.geo-hero[data-active-geo="tn"].tn-cta-outline a {
+  background: transparent;
+  border: 2px solid currentcolor;
+  color: inherit;
+}
+
+.geo-hero[data-active-geo="tn"].tn-height-compact {
+  min-height: 300px;
+}
+
+.geo-hero[data-active-geo="tn"].tn-height-tall {
+  min-height: 650px;
+}
+
+.geo-hero[data-active-geo="tn"].tn-image-left .geo-hero-background img {
+  object-position: left center;
+}
+
+.geo-hero[data-active-geo="tn"].tn-image-center .geo-hero-background img {
+  object-position: center center;
+}
+
+.geo-hero[data-active-geo="tn"].tn-image-right .geo-hero-background img {
+  object-position: right center;
+}
+
+/* END REGION DESIGN CONTROLS */

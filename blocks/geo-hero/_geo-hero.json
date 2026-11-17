@@ -1,4 +1,3 @@
-
 {
   "definitions": [
     {
@@ -25,29 +24,27 @@
     {
       "id": "geo-hero",
       "fields": [
-
-{
-  "component": "select",
-  "name": "classes",
-  "value": "",
-  "label": "Text Color",
-  "valueType": "string",
-  "options": [
-    {
-      "name": "White",
-      "value": ""
-    },
-    {
-      "name": "Dark",
-      "value": "text-dark"
-    },
-    {
-      "name": "Gold",
-      "value": "text-gold"
-    }
-  ]
-},
-
+        {
+          "component": "select",
+          "name": "classes",
+          "value": "",
+          "label": "Text Color",
+          "valueType": "string",
+          "options": [
+            {
+              "name": "White",
+              "value": ""
+            },
+            {
+              "name": "Dark",
+              "value": "text-dark"
+            },
+            {
+              "name": "Gold",
+              "value": "text-gold"
+            }
+          ]
+        },
         {
           "component": "richtext",
           "name": "content_default",
@@ -99,6 +96,574 @@
           "label": "Tennessee Background Image",
           "valueType": "string",
           "multi": false
+        },
+        {
+          "component": "select",
+          "name": "classes_defaultHeadingColor",
+          "label": "Default | Heading Color",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Inherit",
+              "value": ""
+            },
+            {
+              "name": "White",
+              "value": "default-heading-white"
+            },
+            {
+              "name": "Dark",
+              "value": "default-heading-dark"
+            },
+            {
+              "name": "Gold",
+              "value": "default-heading-gold"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_defaultBodyColor",
+          "label": "Default | Description Color",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Inherit",
+              "value": ""
+            },
+            {
+              "name": "White",
+              "value": "default-body-white"
+            },
+            {
+              "name": "Dark",
+              "value": "default-body-dark"
+            },
+            {
+              "name": "Gold",
+              "value": "default-body-gold"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_defaultAlignment",
+          "label": "Default | Text Alignment",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Left",
+              "value": ""
+            },
+            {
+              "name": "Center",
+              "value": "default-align-center"
+            },
+            {
+              "name": "Right",
+              "value": "default-align-right"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_defaultCta",
+          "label": "Default | CTA Style",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Gold",
+              "value": ""
+            },
+            {
+              "name": "White",
+              "value": "default-cta-white"
+            },
+            {
+              "name": "Dark",
+              "value": "default-cta-dark"
+            },
+            {
+              "name": "Outline",
+              "value": "default-cta-outline"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_defaultHeight",
+          "label": "Default | Hero Height",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Standard",
+              "value": ""
+            },
+            {
+              "name": "Compact",
+              "value": "default-height-compact"
+            },
+            {
+              "name": "Tall",
+              "value": "default-height-tall"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_defaultImagePosition",
+          "label": "Default | Image Position",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Automatic",
+              "value": ""
+            },
+            {
+              "name": "Left",
+              "value": "default-image-left"
+            },
+            {
+              "name": "Center",
+              "value": "default-image-center"
+            },
+            {
+              "name": "Right",
+              "value": "default-image-right"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_flHeadingColor",
+          "label": "Florida | Heading Color",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Inherit",
+              "value": ""
+            },
+            {
+              "name": "White",
+              "value": "fl-heading-white"
+            },
+            {
+              "name": "Dark",
+              "value": "fl-heading-dark"
+            },
+            {
+              "name": "Gold",
+              "value": "fl-heading-gold"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_flBodyColor",
+          "label": "Florida | Description Color",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Inherit",
+              "value": ""
+            },
+            {
+              "name": "White",
+              "value": "fl-body-white"
+            },
+            {
+              "name": "Dark",
+              "value": "fl-body-dark"
+            },
+            {
+              "name": "Gold",
+              "value": "fl-body-gold"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_flAlignment",
+          "label": "Florida | Text Alignment",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Left",
+              "value": ""
+            },
+            {
+              "name": "Center",
+              "value": "fl-align-center"
+            },
+            {
+              "name": "Right",
+              "value": "fl-align-right"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_flCta",
+          "label": "Florida | CTA Style",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Gold",
+              "value": ""
+            },
+            {
+              "name": "White",
+              "value": "fl-cta-white"
+            },
+            {
+              "name": "Dark",
+              "value": "fl-cta-dark"
+            },
+            {
+              "name": "Outline",
+              "value": "fl-cta-outline"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_flHeight",
+          "label": "Florida | Hero Height",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Standard",
+              "value": ""
+            },
+            {
+              "name": "Compact",
+              "value": "fl-height-compact"
+            },
+            {
+              "name": "Tall",
+              "value": "fl-height-tall"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_flImagePosition",
+          "label": "Florida | Image Position",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Automatic",
+              "value": ""
+            },
+            {
+              "name": "Left",
+              "value": "fl-image-left"
+            },
+            {
+              "name": "Center",
+              "value": "fl-image-center"
+            },
+            {
+              "name": "Right",
+              "value": "fl-image-right"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_nyHeadingColor",
+          "label": "New York | Heading Color",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Inherit",
+              "value": ""
+            },
+            {
+              "name": "White",
+              "value": "ny-heading-white"
+            },
+            {
+              "name": "Dark",
+              "value": "ny-heading-dark"
+            },
+            {
+              "name": "Gold",
+              "value": "ny-heading-gold"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_nyBodyColor",
+          "label": "New York | Description Color",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Inherit",
+              "value": ""
+            },
+            {
+              "name": "White",
+              "value": "ny-body-white"
+            },
+            {
+              "name": "Dark",
+              "value": "ny-body-dark"
+            },
+            {
+              "name": "Gold",
+              "value": "ny-body-gold"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_nyAlignment",
+          "label": "New York | Text Alignment",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Left",
+              "value": ""
+            },
+            {
+              "name": "Center",
+              "value": "ny-align-center"
+            },
+            {
+              "name": "Right",
+              "value": "ny-align-right"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_nyCta",
+          "label": "New York | CTA Style",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Gold",
+              "value": ""
+            },
+            {
+              "name": "White",
+              "value": "ny-cta-white"
+            },
+            {
+              "name": "Dark",
+              "value": "ny-cta-dark"
+            },
+            {
+              "name": "Outline",
+              "value": "ny-cta-outline"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_nyHeight",
+          "label": "New York | Hero Height",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Standard",
+              "value": ""
+            },
+            {
+              "name": "Compact",
+              "value": "ny-height-compact"
+            },
+            {
+              "name": "Tall",
+              "value": "ny-height-tall"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_nyImagePosition",
+          "label": "New York | Image Position",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Automatic",
+              "value": ""
+            },
+            {
+              "name": "Left",
+              "value": "ny-image-left"
+            },
+            {
+              "name": "Center",
+              "value": "ny-image-center"
+            },
+            {
+              "name": "Right",
+              "value": "ny-image-right"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_tnHeadingColor",
+          "label": "Tennessee | Heading Color",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Inherit",
+              "value": ""
+            },
+            {
+              "name": "White",
+              "value": "tn-heading-white"
+            },
+            {
+              "name": "Dark",
+              "value": "tn-heading-dark"
+            },
+            {
+              "name": "Gold",
+              "value": "tn-heading-gold"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_tnBodyColor",
+          "label": "Tennessee | Description Color",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Inherit",
+              "value": ""
+            },
+            {
+              "name": "White",
+              "value": "tn-body-white"
+            },
+            {
+              "name": "Dark",
+              "value": "tn-body-dark"
+            },
+            {
+              "name": "Gold",
+              "value": "tn-body-gold"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_tnAlignment",
+          "label": "Tennessee | Text Alignment",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Left",
+              "value": ""
+            },
+            {
+              "name": "Center",
+              "value": "tn-align-center"
+            },
+            {
+              "name": "Right",
+              "value": "tn-align-right"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_tnCta",
+          "label": "Tennessee | CTA Style",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Gold",
+              "value": ""
+            },
+            {
+              "name": "White",
+              "value": "tn-cta-white"
+            },
+            {
+              "name": "Dark",
+              "value": "tn-cta-dark"
+            },
+            {
+              "name": "Outline",
+              "value": "tn-cta-outline"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_tnHeight",
+          "label": "Tennessee | Hero Height",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Standard",
+              "value": ""
+            },
+            {
+              "name": "Compact",
+              "value": "tn-height-compact"
+            },
+            {
+              "name": "Tall",
+              "value": "tn-height-tall"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_tnImagePosition",
+          "label": "Tennessee | Image Position",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Automatic",
+              "value": ""
+            },
+            {
+              "name": "Left",
+              "value": "tn-image-left"
+            },
+            {
+              "name": "Center",
+              "value": "tn-image-center"
+            },
+            {
+              "name": "Right",
+              "value": "tn-image-right"
+            }
+          ]
         }
       ]
     }
