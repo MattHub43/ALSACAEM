@@ -238,6 +238,34 @@
         "name": "content_tn",
         "label": "Tennessee",
         "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "imageDefault",
+        "label": "Default Background Image",
+        "valueType": "string",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "name": "imageFlorida",
+        "label": "Florida Background Image",
+        "valueType": "string",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "name": "imageNewYork",
+        "label": "New York Background Image",
+        "valueType": "string",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "name": "imageTennessee",
+        "label": "Tennessee Background Image",
+        "valueType": "string",
+        "multi": false
       }
     ]
   },

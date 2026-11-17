@@ -1,33 +1,38 @@
+
+/* Geo Hero base styling */
 .geo-hero {
+  position: relative;
   background: #eef4fa;
   border-radius: 16px;
   color: #172435;
   margin: 28px 0;
+  min-height: 400px;
+  overflow: hidden;
   padding: 44px 36px;
 }
 
-/* With no JavaScript, show the Default variation only. */
-.geo-hero:not(.geo-ready) > div:not(:first-child),
-.geo-hero.geo-ready > div[hidden] {
-  display: none;
-}
-
+/* Content container */
 .geo-hero > div > div {
   max-width: 740px;
+  position: relative;
+  z-index: 1;
 }
 
+/* Heading */
 .geo-hero h2 {
   font-size: clamp(28px, 4vw, 48px);
   line-height: 1.12;
   margin: 0 0 18px;
 }
 
+/* Description */
 .geo-hero p {
   font-size: 18px;
   line-height: 1.55;
   margin: 0 0 20px;
 }
 
+/* CTA button */
 .geo-hero a {
   background: #ffc32c;
   border-radius: 6px;
@@ -44,11 +49,18 @@
   background: #ffd25f;
 }
 
-@media (max-width: 600px) {
+/* Hide nonselected variations, including nested content */
+.geo-hero [hidden] {
+  display: none !important;
+}
+
+/* Fallback before personalization initializes */
+.geo-hero:not(.geo-ready) > div:not(:first-child) {
+  display: none;
+}
+
+@media (width <= 600px) {
   .geo-hero {
     padding: 30px 22px;
   }
-}
-.geo-hero > div[hidden] {
-  display: none !important;
 }
