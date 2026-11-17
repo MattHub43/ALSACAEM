@@ -1,0 +1,55 @@
+{
+  "definitions": [
+    {
+      "title": "Geo Hero",
+      "id": "geo-hero",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Geo Hero",
+              "model": "geo-hero",
+              "content_default": "<h2>Discover opportunities near you</h2><p>Explore programs and events available across the country.</p><p><a href=\"#programs\">Explore all programs</a></p>",
+              "content_fl": "<h2>Find programs in Florida</h2><p>Discover local events and resources for Florida communities.</p><p><a href=\"#programs\">Explore Florida programs</a></p>",
+              "content_ny": "<h2>Explore opportunities in New York</h2><p>Find regional events, programs, and resources across New York.</p><p><a href=\"#programs\">Explore New York programs</a></p>",
+              "content_tn": "<h2>Discover programs in Tennessee</h2><p>Connect with local events and resources across Tennessee.</p><p><a href=\"#programs\">Explore Tennessee programs</a></p>"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "geo-hero",
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "content_default",
+          "label": "Default (all regions)",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "content_fl",
+          "label": "Florida",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "content_ny",
+          "label": "New York",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "content_tn",
+          "label": "Tennessee",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

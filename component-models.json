@@ -213,6 +213,35 @@
     ]
   },
   {
+    "id": "geo-hero",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "content_default",
+        "label": "Default (all regions)",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "content_fl",
+        "label": "Florida",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "content_ny",
+        "label": "New York",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "content_tn",
+        "label": "Tennessee",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "hero",
     "fields": [
       {

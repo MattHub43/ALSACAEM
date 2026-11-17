@@ -51,7 +51,8 @@
         "cards",
         "columns",
         "fragment",
-        "callout"
+        "callout",
+        "geo-hero"
       ]
     }
   ]
