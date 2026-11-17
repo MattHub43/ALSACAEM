@@ -24,6 +24,57 @@
     {
       "id": "geo-hero",
       "fields": [
+        
+{
+  "component": "select",
+  "name": "classes_defaultHalo",
+  "label": "Default | Text Halo",
+  "valueType": "string",
+  "value": "",
+  "options": [
+    { "name": "None", "value": "" },
+    { "name": "Dark Halo", "value": "default-halo-dark" },
+    { "name": "Light Halo", "value": "default-halo-light" }
+  ]
+},
+{
+  "component": "select",
+  "name": "classes_flHalo",
+  "label": "Florida | Text Halo",
+  "valueType": "string",
+  "value": "",
+  "options": [
+    { "name": "None", "value": "" },
+    { "name": "Dark Halo", "value": "fl-halo-dark" },
+    { "name": "Light Halo", "value": "fl-halo-light" }
+  ]
+},
+{
+  "component": "select",
+  "name": "classes_nyHalo",
+  "label": "New York | Text Halo",
+  "valueType": "string",
+  "value": "",
+  "options": [
+    { "name": "None", "value": "" },
+    { "name": "Dark Halo", "value": "ny-halo-dark" },
+    { "name": "Light Halo", "value": "ny-halo-light" }
+  ]
+},
+{
+  "component": "select",
+  "name": "classes_tnHalo",
+  "label": "Tennessee | Text Halo",
+  "valueType": "string",
+  "value": "",
+  "options": [
+    { "name": "None", "value": "" },
+    { "name": "Dark Halo", "value": "tn-halo-dark" },
+    { "name": "Light Halo", "value": "tn-halo-light" }
+  ]
+},
+
+        
         {
           "component": "select",
           "name": "classes",
