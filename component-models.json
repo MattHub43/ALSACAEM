@@ -203,6 +203,17 @@
     ]
   },
   {
+    "id": "content-fragment-display",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "fragment",
+        "label": "Select Content Fragment",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {

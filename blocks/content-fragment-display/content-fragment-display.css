@@ -1,0 +1,25 @@
+
+/* Content Fragment Display */
+
+.content-fragment-display {
+  background: #eef4fa;
+  border-radius: 12px;
+  color: #172435;
+  margin: 24px 0;
+  padding: 32px;
+}
+
+.content-fragment-display h2 {
+  font-size: 28px;
+  margin: 0 0 16px;
+}
+
+.content-fragment-display p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+.content-fragment-display code {
+  overflow-wrap: anywhere;
+}
